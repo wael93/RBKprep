@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="Static/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="Static/css/fontawesome.min.css"  crossorigin="anonymous">
+    <link rel="stylesheet" href="Static/css/myStyle.css"  crossorigin="anonymous">
+   
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+           <img src="">
+          <a class="navbar-brand" href="#">PlayList Tool</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fas fa-home" aria-hidden="true"></i></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav " style="margin-left: auto" >
+            
+              <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchinput">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search">Search</button> -->
+            </form>
+          </div>
+        </nav>
+        <div class="form-group">
+            <label for="nameOfElement">Name:</label>
+            <input type="text" class="form-control" id="nameOfElement">
+          </div>
+          <div class="form-group">
+            <label for="url">Link:</label>
+            <input type="text" class="form-control" id="url">
+          </div>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary" id="musicButtonId">Music</button>
+            <button type="button"  class="btn btn-secondary" id="moviesButtonId">Movies</button>
+            <button type="button" class="btn btn-secondary" id="youtuobButtonId">Youtube</button>
+            <button type="button" class="btn btn-secondary" id="bloggerButtonId">Ploggers</button>
+          </div>
+
+
+          <div class="list-group">
+              <a href="#" class="list-group-item list-group-item-action active"> My Movies List  </a>
+              <ul class="list-group-item-action" id="Moveisul"></ul>
+          </div>
+          <div class="list-group1">
+                <a href="#" class="list-group-item list-group-item-action active"> My Music List  </a>
+                <ul class="list-group-item-action" id="Musiecul"></ul>
+          </div>
+               <div class="list-group2">
+                  <a href="#" class="list-group-item list-group-item-action active"> My Youtube List  </a>
+                  <ul class="list-group-item-action" id="youtubeul"></ul>
+                 </div>
+                 <div class="list-group3">
+                    <a href="#" class="list-group-item list-group-item-action active"> My Bloggers List  </a>
+                    <ul class="list-group-item-action" id="bloggerul"></ul>
+                   </div>
+          
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="Static/jquery-3.3.1.js"  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="Static/main.js" crossorigin="anonymous"></script>
+
+    <script src="Static/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+
+    <script>
+      
+            
+    
+        $( "#moviesButtonId" ).click(function() {
+          var name=$("#nameOfElement").val()
+          $("#nameOfElement").val("")
+          var url=$("#url").val()
+          $("#url").val("")
+         addMovies(name , url)
+      
+         var a = $( "<a/>", {
+         html: name,
+         "class": "new",
+          href: url
+           });
+           
+           if(name!="" && url!=""){
+           $("#Moveisul").append('<li class="list" >  </li>').append(a)
+           }
+        
+       
+         });
+
+         $( "#musicButtonId" ).click(function() {
+          var name=$("#nameOfElement").val()
+          $("#nameOfElement").val("")
+          var url=$("#url").val()
+          $("#url").val("")
+          addMusics(name , url)
+      
+         var a = $( "<a/>", {
+         html: name,
+         "class": "new",
+          href: url
+           });
+           
+           if(name!="" && url!=""){
+           $("#Musiecul").append('<li class="list" >  </li>').append(a)
+           }
+        
+       
+         });
+
+         $( "#youtuobButtonId" ).click(function() {
+          var name=$("#nameOfElement").val()
+          $("#nameOfElement").val("")
+          var url=$("#url").val()
+          $("#url").val("")
+          addMusics(name , url)
+      
+         var a = $( "<a/>", {
+         html: name,
+         "class": "new",
+          href: url
+           });
+           
+           if(name!="" && url!=""){
+           $("#youtubeul").append('<li class="list" >  </li>').append(a)
+           }
+        
+       
+         });
+         $( "#bloggerButtonId" ).click(function() {
+          var name=$("#nameOfElement").val()
+          $("#nameOfElement").val("")
+          var url=$("#url").val()
+          $("#url").val("")
+          addBloggers(name , url)
+      
+         var a = $( "<a/>", {
+         html: name,
+         "class": "new",
+          href: url
+           });
+           
+           if(name!="" && url!=""){
+           $("#bloggerul").append('<li class="list" >  </li>').append(a)
+           }
+        
+       
+         });
+       
+    
+       
+
+        </script>
+  </body>
+</html>

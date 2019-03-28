@@ -1,0 +1,47 @@
+.list-group{
+width: 20%;
+height: 50%;
+margin-left: 50px;
+position: fixed;
+}
+.list-group1{
+    width: 20%;
+    height: 50%;
+    margin-left: 400px;
+    position: fixed;
+    }
+
+    .list-group2{
+        margin-left:800px; 
+      
+        width: 20%;
+        height: 50%;
+       position: fixed;
+        
+        }
+ .list-group3{
+            width: 20%;
+            height: 50%;
+            margin-left: 1200px;
+            margin-top: 0%;
+            position: fixed;
+          
+            
+ }
+
+.form-group{
+    width: 40%;
+    height: 50%;
+    margin-left: 500px;
+    
+
+
+}
+
+.btn-group{
+    width: 40%;
+    height: 50%;
+    margin-left: 600px;
+
+
+}
